@@ -40,6 +40,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let item = itens[indexPath.row]
             if let posicao = itensSelecionados.index(of: item){
                 itensSelecionados.remove(at: posicao)
+                //teste para checar se estamos deletando todos os itens, idex está sendo deprecado pela Apple :-(
+//                for itensSelecionado in itensSelecionados {
+//                    print(itensSelecionado.nome)
+//                }
             }
         }
     }
