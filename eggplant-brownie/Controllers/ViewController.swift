@@ -7,10 +7,13 @@
 //
 
 import UIKit
+protocol ViewControllerDelegate {
+    func add(_ refeicao: Refeicao)
+}
 
 class ViewController: UIViewController {
     
-    var tableViewController : RefeicoesTableViewController?
+    var delegate : ViewControllerDelegate?
     
     @IBOutlet weak var nomeTextField: UITextField?
     @IBOutlet weak var felicidade: UITextField?
@@ -25,7 +28,7 @@ class ViewController: UIViewController {
                 let refeicao = Refeicao(nome, felicidade)
                 
                 print("Alimento \(refeicao.nome) e nível de satisfação \(refeicao.felicidade) adicionado com sucesso!")
-                tableViewController?.add(refeicao)
+                delegate?.add(refeicao)
             }
         }else{
             print("Erro ao criar refeição")
