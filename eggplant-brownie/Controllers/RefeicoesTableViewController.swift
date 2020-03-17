@@ -4,12 +4,12 @@
 //
 //  Created by Daniel Fillol on 15/03/20.
 //  Copyright © 2020 Entendendo Direito. All rights reserved.
-// teste 
+// 
 
 import UIKit
 
 
-class RefeicoesTableViewController: UITableViewController, ViewControllerDelegate {
+class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
     
     var refeicoes = [Refeicao("Macarrão", 4),
                      Refeicao("Pizza", 4),
