@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let celula = UITableViewCell(style: .default, reuseIdentifier: nil)
         let linhaDaTabela = indexPath.row
         let item = itens[linhaDaTabela]
-        celula.textLabel?.text = item
+        celula.textLabel?.text = item.nome
         return celula
     }
     
@@ -33,16 +33,25 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         guard let celula = tableView.cellForRow(at: indexPath) else {return}
         if celula.accessoryType == .none{
             celula.accessoryType = .checkmark
+            let linhaDaTabela = indexPath.row
+            itensSelecionados.append(itens[linhaDaTabela])
         }else{
             celula.accessoryType = .none
+            let item = itens[indexPath.row]
+            if let posicao = itensSelecionados.index(of: item){
+                itensSelecionados.remove(at: posicao)
+            }
         }
-        
     }
     
     // MARK: - Atributos
     
     var delegate : AdicionaRefeicaoDelegate?
-    var itens: [String] = ["Molho de tomate", "Queijo", "Molho Apimentado", "Manjericão"]
+    var itens: [Item] = [Item("Molho de tomate", 40),
+                         Item("Queijo", 40),
+                         Item("Molho Apimentado", 40),
+                         Item("Manjericão", 40)]
+    var itensSelecionados: [Item] = []
     
     // MARK: - IBO
     
@@ -55,11 +64,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         if let nomeDaRefeicao = nomeTextField?.text , let felicidadeDaRefeicao = felicidade?.text {
             let nome   = nomeDaRefeicao
-            
             if let felicidade = Int(felicidadeDaRefeicao){
-            
-                let refeicao = Refeicao(nome, felicidade)
-                
+                let refeicao = Refeicao(nome, felicidade, itensSelecionados)
                 print("Alimento \(refeicao.nome) e nível de satisfação \(refeicao.felicidade) adicionado com sucesso!")
                 delegate?.add(refeicao)
             }
