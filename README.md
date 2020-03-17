@@ -1,4 +1,4 @@
-# eggplant-brownie
+# Eggplant-brownie
 Primeiro Projeto
 
 Projeto inicial para Iphone.
