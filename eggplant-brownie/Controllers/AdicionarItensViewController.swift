@@ -7,9 +7,9 @@
 //
 
 import UIKit
-//protocol AdicionaItensDelegate {
-//    func add(_ item: Item)
-//}
+protocol AdicionaItensDelegate {
+    func add(_ item: Item)
+}
 
 class AdicionarItensViewController: UIViewController {
 
@@ -20,16 +20,16 @@ class AdicionarItensViewController: UIViewController {
     
     // MARK: - Atributos
     
-//    var delegate = AdicionaItensDelegate?
-//    
-//    init(delegate: AdicionaItensDelegate) {
-//        super.init(nibName: "AdicionarItensViewController", bundle: nil)
-//        self.delegate = delegate
-//    }
-//    
-//    required init?(coder aCoder: NSCoder) {
-//        super.init(coder: aCoder)
-//    }
+    var delegate : AdicionaItensDelegate?
+    
+    init(delegate: AdicionaItensDelegate) {
+        super.init(nibName: "AdicionarItensViewController", bundle: nil)
+        self.delegate = delegate
+    }
+    
+    required init?(coder aCoder: NSCoder) {
+        super.init(coder: aCoder)
+    }
     
     
     // MARK: - View Life Cycle
@@ -49,7 +49,7 @@ class AdicionarItensViewController: UIViewController {
         
         if let numeroDeCalorias = Double(calorias){
             let item = Item(nome,numeroDeCalorias)
-            //delegate.add(item)
+            delegate?.add(item)
             navigationController?.popViewController(animated: true)           
         }
     }

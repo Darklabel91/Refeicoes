@@ -11,9 +11,7 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
-//, AdicionaItensDelegate
-{
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, AdicionaItensDelegate{
     
     // MARK: - IBOutlets
     
@@ -41,16 +39,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc func adicionarItem(){
-        let adicionarItensViewController = AdicionarItensViewController(
-        //    delegate: self
-        )
+        let adicionarItensViewController = AdicionarItensViewController(delegate: self)
         navigationController?.pushViewController(adicionarItensViewController, animated: true)
     }
     
-//    func add(_ item: Item) {
-//        itens.append(item)
-//        itensTableView.reloadData()
-//    }
+    func add(_ item: Item) {
+        itens.append(item)
+        itensTableView.reloadData()
+    }
     
     // MARK: - UItableViewDataSource
     
