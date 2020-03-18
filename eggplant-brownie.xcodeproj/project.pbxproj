@@ -15,6 +15,8 @@
 		B386A9CF241D6B07007E432D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B386A9CD241D6B07007E432D /* LaunchScreen.storyboard */; };
 		B386A9D8241DAD09007E432D /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9D7241DAD09007E432D /* Refeicao.swift */; };
 		B386A9DA241DAD52007E432D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9D9241DAD52007E432D /* Item.swift */; };
+		B3C546C62422B537008EBEA4 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */; };
+		B3C546C72422B537008EBEA4 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C546C52422B537008EBEA4 /* AdicionarItensViewController.xib */; };
 		B3E7E135241EDD070047F549 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E7E134241EDD070047F549 /* RefeicoesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +32,8 @@
 		B386A9D6241D77E3007E432D /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		B386A9D7241DAD09007E432D /* Refeicao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refeicao.swift; sourceTree = "<group>"; };
 		B386A9D9241DAD52007E432D /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
+		B3C546C52422B537008EBEA4 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		B3E7E134241EDD070047F549 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -88,6 +92,7 @@
 		B386A9DC241DAE2F007E432D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */,
 				B386A9C6241D6B06007E432D /* ViewController.swift */,
 				B3E7E134241EDD070047F549 /* RefeicoesTableViewController.swift */,
 			);
@@ -98,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				B386A9C8241D6B06007E432D /* Main.storyboard */,
+				B3C546C52422B537008EBEA4 /* AdicionarItensViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -162,6 +168,7 @@
 			files = (
 				B386A9CF241D6B07007E432D /* LaunchScreen.storyboard in Resources */,
 				B386A9CC241D6B07007E432D /* Assets.xcassets in Resources */,
+				B3C546C72422B537008EBEA4 /* AdicionarItensViewController.xib in Resources */,
 				B386A9CA241D6B06007E432D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -175,6 +182,7 @@
 			files = (
 				B386A9DA241DAD52007E432D /* Item.swift in Sources */,
 				B386A9C7241D6B06007E432D /* ViewController.swift in Sources */,
+				B3C546C62422B537008EBEA4 /* AdicionarItensViewController.swift in Sources */,
 				B386A9C3241D6B06007E432D /* AppDelegate.swift in Sources */,
 				B3E7E135241EDD070047F549 /* RefeicoesTableViewController.swift in Sources */,
 				B386A9C5241D6B06007E432D /* SceneDelegate.swift in Sources */,

@@ -13,6 +13,33 @@ protocol AdicionaRefeicaoDelegate {
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+
+    
+    // MARK: - Atributos
+    
+    var delegate : AdicionaRefeicaoDelegate?
+    var itens: [Item] = [Item("Molho de tomate", 40),
+                         Item("Queijo", 40),
+                         Item("Molho Apimentado", 40),
+                         Item("Manjericão", 40)]
+    var itensSelecionados: [Item] = []
+    
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var nomeTextField: UITextField?
+    @IBOutlet weak var felicidade: UITextField?
+    
+    // MARK: - View Life Cycle
+    
+    override func viewDidLoad() {
+        let botaoAdicionaItem = UIBarButtonItem(title: "Adicionar", style: .plain, target: self , action: Selector(("adicionarItem")))
+        navigationItem.rightBarButtonItem = botaoAdicionaItem
+    }
+    
+    @objc func adicionarItem(){
+        print("Item foi add")
+    }
+    
     // MARK: - UItableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -41,26 +68,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             if let posicao = itensSelecionados.index(of: item){
                 itensSelecionados.remove(at: posicao)
                 //teste para checar se estamos deletando todos os itens, idex está sendo deprecado pela Apple :-(
-//                for itensSelecionado in itensSelecionados {
-//                    print(itensSelecionado.nome)
-//                }
+                //                for itensSelecionado in itensSelecionados {
+                //                    print(itensSelecionado.nome)
+                //                }
             }
         }
     }
-    
-    // MARK: - Atributos
-    
-    var delegate : AdicionaRefeicaoDelegate?
-    var itens: [Item] = [Item("Molho de tomate", 40),
-                         Item("Queijo", 40),
-                         Item("Molho Apimentado", 40),
-                         Item("Manjericão", 40)]
-    var itensSelecionados: [Item] = []
-    
-    // MARK: - IBO
-    
-    @IBOutlet weak var nomeTextField: UITextField?
-    @IBOutlet weak var felicidade: UITextField?
     
     // MARK: IBA Actions
       
