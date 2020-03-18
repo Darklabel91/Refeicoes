@@ -9,6 +9,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdicionarItensViewController" customModule="eggplant_brownie" customModuleProvider="target">
             <connections>
+                <outlet property="caloriasTextField" destination="dG1-Gg-pme" id="5oA-QB-3LE"/>
+                <outlet property="nomeTextField" destination="FxG-NG-7hi" id="3Zx-xW-g7P"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,6 +42,9 @@
                     <rect key="frame" x="175" y="223" width="65" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Adicionar"/>
+                    <connections>
+                        <action selector="adicionarItem:" destination="-1" eventType="touchUpInside" id="J3W-j9-98P"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Calorias:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="czV-jW-Lf5">
                     <rect key="frame" x="46" y="166" width="67" height="21"/>
