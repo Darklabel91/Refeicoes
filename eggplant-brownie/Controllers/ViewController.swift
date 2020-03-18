@@ -11,9 +11,13 @@ protocol AdicionaRefeicaoDelegate {
     func add(_ refeicao: Refeicao)
 }
 
-class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+//, AdicionaItensDelegate
+{
     
-
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var itensTableView: UITableView!
     
     // MARK: - Atributos
     
@@ -37,9 +41,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     @objc func adicionarItem(){
-        let adicionarItensViewController = AdicionarItensViewController()
+        let adicionarItensViewController = AdicionarItensViewController(
+        //    delegate: self
+        )
         navigationController?.pushViewController(adicionarItensViewController, animated: true)
     }
+    
+//    func add(_ item: Item) {
+//        itens.append(item)
+//        itensTableView.reloadData()
+//    }
     
     // MARK: - UItableViewDataSource
     
@@ -68,10 +79,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             let item = itens[indexPath.row]
             if let posicao = itensSelecionados.index(of: item){
                 itensSelecionados.remove(at: posicao)
-                //teste para checar se estamos deletando todos os itens, idex está sendo deprecado pela Apple :-(
-                //                for itensSelecionado in itensSelecionados {
-                //                    print(itensSelecionado.nome)
-                //                }
+//              teste para checar se estamos deletando todos os itens, idex está sendo deprecado pela Apple :-(
+//              for itensSelecionado in itensSelecionados {
+//                  print(itensSelecionado.nome)
+//              }
             }
         }
     }

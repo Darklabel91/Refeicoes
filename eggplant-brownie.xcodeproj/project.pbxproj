@@ -92,9 +92,9 @@
 		B386A9DC241DAE2F007E432D /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */,
 				B386A9C6241D6B06007E432D /* ViewController.swift */,
 				B3E7E134241EDD070047F549 /* RefeicoesTableViewController.swift */,
+				B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";

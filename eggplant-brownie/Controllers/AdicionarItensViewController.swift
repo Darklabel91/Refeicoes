@@ -7,13 +7,30 @@
 //
 
 import UIKit
+//protocol AdicionaItensDelegate {
+//    func add(_ item: Item)
+//}
 
 class AdicionarItensViewController: UIViewController {
 
-    // MARK: -IBOutlets
+    // MARK: - IBOutlets
     
     @IBOutlet weak var nomeTextField: UITextField!
     @IBOutlet weak var caloriasTextField: UITextField!
+    
+    // MARK: - Atributos
+    
+//    var delegate = AdicionaItensDelegate?
+//    
+//    init(delegate: AdicionaItensDelegate) {
+//        super.init(nibName: "AdicionarItensViewController", bundle: nil)
+//        self.delegate = delegate
+//    }
+//    
+//    required init?(coder aCoder: NSCoder) {
+//        super.init(coder: aCoder)
+//    }
+    
     
     // MARK: - View Life Cycle
     
@@ -31,7 +48,8 @@ class AdicionarItensViewController: UIViewController {
         guard let nome = nomeTextField.text, let calorias = caloriasTextField.text else {return}
         
         if let numeroDeCalorias = Double(calorias){
-            let _ = Item(nome,numeroDeCalorias)
+            let item = Item(nome,numeroDeCalorias)
+            //delegate.add(item)
             navigationController?.popViewController(animated: true)           
         }
     }
