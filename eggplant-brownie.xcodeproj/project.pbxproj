@@ -83,8 +83,8 @@
 		B386A9DB241DADF7007E432D /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B386A9D9241DAD52007E432D /* Item.swift */,
 				B386A9D7241DAD09007E432D /* Refeicao.swift */,
+				B386A9D9241DAD52007E432D /* Item.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

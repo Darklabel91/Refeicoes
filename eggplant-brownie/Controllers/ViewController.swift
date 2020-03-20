@@ -15,7 +15,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var itensTableView: UITableView!
+    @IBOutlet weak var itensTableView: UITableView?
     
     // MARK: - Atributos
     
@@ -45,7 +45,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func add(_ item: Item) {
         itens.append(item)
-        itensTableView.reloadData()
+        if let tableView = itensTableView{
+            tableView.reloadData()
+        }else{
+            let alerta = UIAlertController(title: "Desculpe", message: "não foi possível adicionar o item", preferredStyle: .alert)
+            let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
+            alerta.addAction(ok)
+            present(alerta, animated: true, completion: nil)
+        }
     }
     
     // MARK: - UItableViewDataSource
@@ -88,7 +95,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBAction func adicionar(_ sender: UIButton) {
         
         if let nomeDaRefeicao = nomeTextField?.text , let felicidadeDaRefeicao = felicidade?.text {
-            let nome   = nomeDaRefeicao
+            let nome = nomeDaRefeicao
             if let felicidade = Int(felicidadeDaRefeicao){
                 let refeicao = Refeicao(nome, felicidade, itensSelecionados)
                 print("Alimento \(refeicao.nome) e nível de satisfação \(refeicao.felicidade) adicionado com sucesso!")
