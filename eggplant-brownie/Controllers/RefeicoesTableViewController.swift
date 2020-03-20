@@ -24,6 +24,10 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         let refeicao = refeicoes[indexPath.row]
         celula.textLabel?.text = refeicao.nome
         
+        
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(mostrarDetalhes(_gesture:)))
+        celula.addGestureRecognizer(longPress)
+        
         return celula
     }
     
@@ -32,6 +36,12 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         tableView.reloadData()
     }
     
+    
+    @objc func mostrarDetalhes (_gesture : UILongPressGestureRecognizer) {
+        if _gesture.state == .began {
+            print("Ta rolando")
+        }
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let viewController = segue.destination as? ViewController {
