@@ -18,6 +18,7 @@
 		B3C546C62422B537008EBEA4 /* AdicionarItensViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */; };
 		B3C546C72422B537008EBEA4 /* AdicionarItensViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3C546C52422B537008EBEA4 /* AdicionarItensViewController.xib */; };
 		B3E7E135241EDD070047F549 /* RefeicoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E7E134241EDD070047F549 /* RefeicoesTableViewController.swift */; };
+		B3E9F4B5242576880037B44A /* Alerta.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3E9F4B4242576880037B44A /* Alerta.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		B3C546C42422B537008EBEA4 /* AdicionarItensViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdicionarItensViewController.swift; sourceTree = "<group>"; };
 		B3C546C52422B537008EBEA4 /* AdicionarItensViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdicionarItensViewController.xib; sourceTree = "<group>"; };
 		B3E7E134241EDD070047F549 /* RefeicoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicoesTableViewController.swift; sourceTree = "<group>"; };
+		B3E9F4B4242576880037B44A /* Alerta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerta.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			children = (
 				B386A9D7241DAD09007E432D /* Refeicao.swift */,
 				B386A9D9241DAD52007E432D /* Item.swift */,
+				B3E9F4B4242576880037B44A /* Alerta.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3E9F4B5242576880037B44A /* Alerta.swift in Sources */,
 				B386A9DA241DAD52007E432D /* Item.swift in Sources */,
 				B386A9C7241D6B06007E432D /* ViewController.swift in Sources */,
 				B3C546C62422B537008EBEA4 /* AdicionarItensViewController.swift in Sources */,
