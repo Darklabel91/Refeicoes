@@ -16,8 +16,7 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
                      Refeicao("Japa", 5)]
     
     override func viewDidLoad() {
-        
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return}
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
         let caminho = diretorio.appendingPathComponent("refeicao")
         
         do {
@@ -26,7 +25,6 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             refeicoes = refeicoesSalvas
         } catch {
             print(error.localizedDescription)
-            
         }
     }
     
@@ -50,14 +48,12 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
         refeicoes.append(refeicao)
         tableView.reloadData()
         
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return}
+        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else {return}
         let caminho = diretorio.appendingPathComponent("refeicao")
         
         do {
-            
             let dados = try NSKeyedArchiver.archivedData(withRootObject: refeicoes, requiringSecureCoding: false)
             try dados.write(to: caminho)
-            
         } catch {
             print(error.localizedDescription)
         }
