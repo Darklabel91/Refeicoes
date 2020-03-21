@@ -10,11 +10,11 @@
 		B313656524258CDA0058473E /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313656424258CDA0058473E /* RemoveRefeicaoViewController.swift */; };
 		B368CF852426A5270082FAB7 /* RefeicaoDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368CF842426A5270082FAB7 /* RefeicaoDao.swift */; };
 		B368CF872426AA540082FAB7 /* ItemDao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B368CF862426AA540082FAB7 /* ItemDao.swift */; };
+		B368CF882426B6D30082FAB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B386A9CB241D6B07007E432D /* Assets.xcassets */; };
 		B386A9C3241D6B06007E432D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9C2241D6B06007E432D /* AppDelegate.swift */; };
 		B386A9C5241D6B06007E432D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9C4241D6B06007E432D /* SceneDelegate.swift */; };
 		B386A9C7241D6B06007E432D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9C6241D6B06007E432D /* ViewController.swift */; };
 		B386A9CA241D6B06007E432D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B386A9C8241D6B06007E432D /* Main.storyboard */; };
-		B386A9CC241D6B07007E432D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B386A9CB241D6B07007E432D /* Assets.xcassets */; };
 		B386A9CF241D6B07007E432D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B386A9CD241D6B07007E432D /* LaunchScreen.storyboard */; };
 		B386A9D8241DAD09007E432D /* Refeicao.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9D7241DAD09007E432D /* Refeicao.swift */; };
 		B386A9DA241DAD52007E432D /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9D9241DAD52007E432D /* Item.swift */; };
@@ -28,7 +28,7 @@
 		B313656424258CDA0058473E /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
 		B368CF842426A5270082FAB7 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
 		B368CF862426AA540082FAB7 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
-		B386A9BF241D6B06007E432D /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B386A9BF241D6B06007E432D /* Brownie de Beringela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brownie de Beringela.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B386A9C2241D6B06007E432D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B386A9C4241D6B06007E432D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B386A9C6241D6B06007E432D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		B386A9C0241D6B06007E432D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B386A9BF241D6B06007E432D /* eggplant-brownie.app */,
+				B386A9BF241D6B06007E432D /* Brownie de Beringela.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B386A9BE241D6B06007E432D /* eggplant-brownie */ = {
+		B386A9BE241D6B06007E432D /* Brownie de Beringela */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "eggplant-brownie" */;
+			buildConfigurationList = B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "Brownie de Beringela" */;
 			buildPhases = (
 				B386A9BB241D6B06007E432D /* Sources */,
 				B386A9BC241D6B06007E432D /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "eggplant-brownie";
+			name = "Brownie de Beringela";
 			productName = "eggplant-brownie";
-			productReference = B386A9BF241D6B06007E432D /* eggplant-brownie.app */;
+			productReference = B386A9BF241D6B06007E432D /* Brownie de Beringela.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B386A9BE241D6B06007E432D /* eggplant-brownie */,
+				B386A9BE241D6B06007E432D /* Brownie de Beringela */,
 			);
 		};
 /* End PBXProject section */
@@ -179,8 +179,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				B386A9CF241D6B07007E432D /* LaunchScreen.storyboard in Resources */,
-				B386A9CC241D6B07007E432D /* Assets.xcassets in Resources */,
 				B3C546C72422B537008EBEA4 /* AdicionarItensViewController.xib in Resources */,
+				B368CF882426B6D30082FAB7 /* Assets.xcassets in Resources */,
 				B386A9CA241D6B06007E432D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.entendentodireito.eggplant-brownie";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Brownie de Beringela";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.entendentodireito.eggplant-brownie";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Brownie de Beringela";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "eggplant-brownie" */ = {
+		B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "Brownie de Beringela" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B386A9D4241D6B07007E432D /* Debug */,
