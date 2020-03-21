@@ -12,11 +12,11 @@ class Alerta {
     
     let controller: UIViewController
     
-    init(controler: UIViewController) {
-        self.controller = controler
+    init(controller: UIViewController) {
+        self.controller = controller
     }
     
-    func exibe (titulo: String = "Erro", mensagem: String) {
+    func exibe(titulo: String = "Erro", mensagem: String) {
         let alerta = UIAlertController(title: titulo, message: mensagem, preferredStyle: .alert)
         let ok = UIAlertAction(title: "Ok", style: .cancel, handler: nil)
         alerta.addAction(ok)

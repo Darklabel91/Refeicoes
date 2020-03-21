@@ -56,7 +56,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         if let tableView = itensTableView{
             tableView.reloadData()
         }else{
-            Alerta(controler: self).exibe(titulo: "Desculpe", mensagem: "Não foi possível atualizar a tabela")
+            Alerta(controller: self).exibe(titulo: "Desculpe", mensagem: "Não foi possível atualizar a tabela")
         }
         
         do {
@@ -124,7 +124,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     @IBAction func adicionar(_ sender: Any) {
         guard let refeicao = recuperaRefeicaoDoFormulario() else {
-            Alerta(controler: self).exibe(mensagem: "Erro ao Adicionar Refeição")
+            Alerta(controller: self).exibe(mensagem: "Erro ao Adicionar Refeição")
             return
         }
         delegate?.add(refeicao)
