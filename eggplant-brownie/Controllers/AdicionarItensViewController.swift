@@ -44,6 +44,7 @@ class AdicionarItensViewController: UIViewController {
     @IBAction func adicionarItem(_ sender: Any) {
         // navegar para proxima tela: navigationController.push()
         // voltar para tela anterior: navigationController.pop()
+        // teste
         
         guard let nome = nomeTextField.text, let calorias = caloriasTextField.text else {return}
         
