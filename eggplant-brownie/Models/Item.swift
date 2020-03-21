@@ -24,13 +24,13 @@ class Item: NSObject, NSCoding {
     
     // MARK: - NSCoding
     
-    func encode(with coder: NSCoder) {
-        coder.encode(nome, forKey: "nome")
-        coder.encode(calorias, forKey: "calorias")
+    func encode(with aCoder: NSCoder) {
+        aCoder.encode(nome, forKey: "nome")
+        aCoder.encode(calorias, forKey: "calorias")
     }
     
-    required init?(coder: NSCoder) {
-        nome = coder.decodeObject(forKey: "nome") as! String
-        calorias = coder.decodeDouble(forKey: "calorias")
+    required init?(coder aCoder: NSCoder) {
+        nome = aCoder.decodeObject(forKey: "nome") as! String
+        calorias = aCoder.decodeDouble(forKey: "calorias")
     }
 }

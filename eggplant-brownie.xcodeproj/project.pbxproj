@@ -88,8 +88,8 @@
 			isa = PBXGroup;
 			children = (
 				B386A9D7241DAD09007E432D /* Refeicao.swift */,
-				B313656424258CDA0058473E /* RemoveRefeicao.swift */,
 				B386A9D9241DAD52007E432D /* Item.swift */,
+				B313656424258CDA0058473E /* RemoveRefeicao.swift */,
 				B3E9F4B4242576880037B44A /* Alerta.swift */,
 			);
 			path = Models;
