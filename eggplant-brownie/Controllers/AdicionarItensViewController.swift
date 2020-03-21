@@ -27,8 +27,8 @@ class AdicionarItensViewController: UIViewController {
         self.delegate = delegate
     }
     
-    required init?(coder aCoder: NSCoder) {
-        super.init(coder: aCoder)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
     }
     
     
@@ -48,7 +48,7 @@ class AdicionarItensViewController: UIViewController {
         guard let nome = nomeTextField.text, let calorias = caloriasTextField.text else {return}
         
         if let numeroDeCalorias = Double(calorias){
-            let item = Item(nome,numeroDeCalorias)
+            let item = Item(nome: nome,calorias: numeroDeCalorias)
             delegate?.add(item)
             navigationController?.popViewController(animated: true)           
         }

@@ -8,11 +8,11 @@
 
 import UIKit
 
-class RemoveRefeicao{
+class RemoveRefeicaoViewController {
     
     let controller : UIViewController
         
-    init(controller : UITableViewController) {
+    init(controller : UIViewController) {
         self.controller = controller
     }
     

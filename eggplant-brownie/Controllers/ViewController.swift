@@ -20,10 +20,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - Atributos
     
     var delegate : AdicionaRefeicaoDelegate?
-    var itens: [Item] = [Item("Molho de tomate", 40),
-                         Item("Queijo", 40),
-                         Item("Molho Apimentado", 40),
-                         Item("Manjericão", 40)]
+    var itens: [Item] = [Item(nome: "Molho de tomate", calorias: 40.0),
+                         Item(nome: "Queijo", calorias: 40.0),
+                         Item(nome: "Molho apimentado", calorias: 40.0),
+                         Item(nome: "Manjericao", calorias: 40.0)]
     var itensSelecionados: [Item] = []
     
     // MARK: - IBOutlets
@@ -34,8 +34,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
-        let botaoAdicionaItem = UIBarButtonItem(title: "Adicionar", style: .plain, target: self , action: Selector(("adicionarItem")))
+        let botaoAdicionaItem = UIBarButtonItem(title: "Adicionar", style: .plain, target: self , action:
+ Selector(("adicionarItem")))
+        //#selector(adicionarItens))
         navigationItem.rightBarButtonItem = botaoAdicionaItem
+        do {
+            guard let diretorio = recuperaDiretorio() else { return }
+            let dados = try Data(contentsOf: diretorio)
+            let itensSalvos = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as! [Item]
+            itens = itensSalvos
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     @objc func adicionarItem(){
@@ -50,9 +60,16 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }else{
             Alerta(controler: self).exibe(titulo: "Desculpe", mensagem: "Não foi possível atualizar a tabela")
         }
+        do {
+            let dados = try NSKeyedArchiver.archivedData(withRootObject: itens, requiringSecureCoding: false)
+            guard let caminho = //recuperaDiretorio() else { return }
+            try dados.write(to: caminho)
+        } catch {
+            print(error.localizedDescription)
+        }
     }
 
-    // MARK: - UItableViewDataSource
+    // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return itens.count
@@ -66,7 +83,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return celula
     }
     
-    // MARK: UITableViewDelegate
+    // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let celula = tableView.cellForRow(at: indexPath) else {return}
@@ -94,12 +111,12 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         guard let felicidadeDaRefeicao = felicidade?.text, let felicidade = Int(felicidadeDaRefeicao) else {
             return nil
         }
-        let refeicao = Refeicao(nomeDaRefeicao, felicidade, itensSelecionados)
+        let refeicao = Refeicao(nome: nomeDaRefeicao, felicidade: felicidade, itens: itensSelecionados)
         return refeicao
     }
     
-    // MARK: IBA Actions
-      
+    // MARK: - IBActions
+    
     @IBAction func adicionar(_ sender: UIButton) {
         guard let refeicao = recuperaRefeicaoDoFormulario() else {
             Alerta(controler: self).exibe(mensagem: "Erro ao Adicionar Refeição")
@@ -109,4 +126,3 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         navigationController?.popViewController(animated: true)
     }
 }
-

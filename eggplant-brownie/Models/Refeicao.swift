@@ -18,7 +18,7 @@ class Refeicao: NSObject, NSCoding {
     
     // MARK: - Init
     
-    init(_ nome: String, _ felicidade: Int, _ itens:[Item] = []){
+    init(nome: String, felicidade: Int, itens:[Item] = []){
         self.nome = nome
         self.felicidade = felicidade
         self.itens = itens
@@ -42,7 +42,7 @@ class Refeicao: NSObject, NSCoding {
     // MARK: - Métodos
     
     func totalDeCalorias () -> Double{
-        var total: Double = 0
+        var total: Double = 0.0
         for item in itens {
             total += item.calorias
         }

@@ -11,9 +11,9 @@ import UIKit
 
 class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDelegate {
     
-    var refeicoes = [Refeicao("Macarrão", 4),
-                     Refeicao("Pizza", 4),
-                     Refeicao("Japa", 5)]
+    var refeicoes = [Refeicao(nome: "Macarrão", felicidade: 4),
+                     Refeicao(nome: "Pizza", felicidade: 4),
+                     Refeicao(nome: "Japa", felicidade: 5)]
     
     override func viewDidLoad() {
         guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
@@ -66,7 +66,7 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
             guard let indexPath = tableView.indexPath(for: celula) else {return}
             let refeicao = refeicoes[indexPath.row]
             
-            RemoveRefeicao(controller: self).exibe(refeicao, handler: { alert in
+            RemoveRefeicaoViewController(controller: self).exibe(refeicao, handler: { alert in
                 self.refeicoes.remove(at: indexPath.row)
                 self.tableView.reloadData()
             })

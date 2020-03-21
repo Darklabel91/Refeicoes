@@ -17,10 +17,10 @@ class Item: NSObject, NSCoding {
     
     // MARK: - Init
     
-      init(_ nome: String, _ calorias: Double) {
-          self.nome = nome
-          self.calorias = calorias
-      }
+    init(nome: String, calorias: Double) {
+        self.nome = nome
+        self.calorias = calorias
+    }
     
     // MARK: - NSCoding
     
@@ -29,8 +29,8 @@ class Item: NSObject, NSCoding {
         aCoder.encode(calorias, forKey: "calorias")
     }
     
-    required init?(coder aCoder: NSCoder) {
-        nome = aCoder.decodeObject(forKey: "nome") as! String
-        calorias = aCoder.decodeDouble(forKey: "calorias")
+    required init?(coder aDecoder: NSCoder) {
+        nome = aDecoder.decodeObject(forKey: "nome") as! String
+        calorias = aDecoder.decodeDouble(forKey: "calorias")
     }
 }
