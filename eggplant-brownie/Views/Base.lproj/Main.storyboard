@@ -41,6 +41,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaf-zP-gOD" colorLabel="IBBuiltInLabel-Gray">
+                                <rect key="frame" x="162" y="789" width="91" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Add Refeicao"/>
+                                <connections>
+                                    <action selector="adicionar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nam-63-FCJ"/>
+                                </connections>
+                            </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mLa-Vr-r2U">
                                 <rect key="frame" x="33" y="293" width="349" height="476"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,16 +58,8 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="gZ2-q5-Yh7"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaf-zP-gOD" colorLabel="IBBuiltInLabel-Gray">
-                                <rect key="frame" x="162" y="789" width="91" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Add Refeicao"/>
-                                <connections>
-                                    <action selector="adicionar:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Nam-63-FCJ"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selecione os Itens da Refeição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dDf-b5-fV7">
-                                <rect key="frame" x="33" y="245" width="233" height="21"/>
+                                <rect key="frame" x="33" y="264" width="233" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -120,7 +120,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="x7J-bU-tCA">
-                        <barButtonItem key="rightBarButtonItem" title="Adicionar" id="lEm-Pq-ATk">
+                        <barButtonItem key="rightBarButtonItem" title="Add Refeição" id="lEm-Pq-ATk">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="show" id="wHV-vP-iiP"/>
                             </connections>
