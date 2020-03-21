@@ -47,10 +47,16 @@ class AdicionarItensViewController: UIViewController {
         
         guard let nome = nomeTextField.text, let calorias = caloriasTextField.text else {return}
         
-        if let numeroDeCalorias = Double(calorias){
-            let item = Item(nome: nome,calorias: numeroDeCalorias)
-            delegate?.add(item)
-            navigationController?.popViewController(animated: true)           
+        if nome == "" {
+            Alerta.init(controller: self).exibe(mensagem: "Preencha o nome do item")
+        }else{
+            if let numeroDeCalorias = Double(calorias){
+                let item = Item(nome: nome,calorias: numeroDeCalorias)
+                delegate?.add(item)
+                navigationController?.popViewController(animated: true)
+            }else{
+                Alerta.init(controller: self).exibe(mensagem: "Preencha as calorias")
+            }
         }
     }
 }
