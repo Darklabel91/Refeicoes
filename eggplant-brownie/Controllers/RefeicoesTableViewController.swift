@@ -15,19 +15,6 @@ class RefeicoesTableViewController: UITableViewController, AdicionaRefeicaoDeleg
                      Refeicao(nome: "Pizza", felicidade: 4),
                      Refeicao(nome: "Japa", felicidade: 5)]
     
-    override func viewDidLoad() {
-        guard let diretorio = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first else { return }
-        let caminho = diretorio.appendingPathComponent("refeicao")
-        
-        do {
-            let dados = try Data(contentsOf: caminho)
-            guard let refeicoesSalvas = try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(dados) as? Array<Refeicao> else { return }
-            refeicoes = refeicoesSalvas
-        } catch {
-            print(error.localizedDescription)
-        }
-    }
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return refeicoes.count
     }
