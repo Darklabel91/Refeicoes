@@ -28,15 +28,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - IBOutlets
     
-    @IBOutlet weak var nomeTextField: UITextField?
+    @IBOutlet var nomeTextField: UITextField?
     @IBOutlet weak var felicidade: UITextField?
     
     // MARK: - View Life Cycle
     
     override func viewDidLoad() {
-        let botaoAdicionaItem = UIBarButtonItem(title: "Adicionar", style: .plain, target: self , action:  #selector((adicionarItem)))
+        let botaoAdicionaItem = UIBarButtonItem(title: "Adicionar", style: .plain, target: self , action:  #selector(adicionarItens))
         navigationItem.rightBarButtonItem = botaoAdicionaItem
-        
         do {
             guard let diretorio = recuperaDiretorio() else { return }
             let dados = try Data(contentsOf: diretorio)
@@ -47,7 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
     
-    @objc func adicionarItem(){
+    @objc func adicionarItens(){
         let adicionarItensViewController = AdicionarItensViewController(delegate: self)
         navigationController?.pushViewController(adicionarItensViewController, animated: true)
     }
@@ -100,8 +99,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }else{
             celula.accessoryType = .none
             let item = itens[indexPath.row]
-            if let posicao = itensSelecionados.index(of: item){
-                itensSelecionados.remove(at: posicao)
+            if let position = itensSelecionados.index(of: item){
+                itensSelecionados.remove(at: position)
 //              teste para checar se estamos deletando todos os itens, idex está sendo deprecado pela Apple :-(
 //              for itensSelecionado in itensSelecionados {
 //                  print(itensSelecionado.nome)
@@ -123,7 +122,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     // MARK: - IBActions
     
-    @IBAction func adicionar(_ sender: UIButton) {
+    @IBAction func adicionar(_ sender: Any) {
         guard let refeicao = recuperaRefeicaoDoFormulario() else {
             Alerta(controler: self).exibe(mensagem: "Erro ao Adicionar Refeição")
             return
