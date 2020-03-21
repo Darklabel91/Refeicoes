@@ -28,7 +28,7 @@
 		B313656424258CDA0058473E /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
 		B368CF842426A5270082FAB7 /* RefeicaoDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefeicaoDao.swift; sourceTree = "<group>"; };
 		B368CF862426AA540082FAB7 /* ItemDao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDao.swift; sourceTree = "<group>"; };
-		B386A9BF241D6B06007E432D /* Brownie de Beringela.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brownie de Beringela.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B386A9BF241D6B06007E432D /* Alimentos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Alimentos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B386A9C2241D6B06007E432D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B386A9C4241D6B06007E432D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B386A9C6241D6B06007E432D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -67,7 +67,7 @@
 		B386A9C0241D6B06007E432D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B386A9BF241D6B06007E432D /* Brownie de Beringela.app */,
+				B386A9BF241D6B06007E432D /* Alimentos.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -123,9 +123,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B386A9BE241D6B06007E432D /* Brownie de Beringela */ = {
+		B386A9BE241D6B06007E432D /* eggplant-brownie */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "Brownie de Beringela" */;
+			buildConfigurationList = B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "eggplant-brownie" */;
 			buildPhases = (
 				B386A9BB241D6B06007E432D /* Sources */,
 				B386A9BC241D6B06007E432D /* Frameworks */,
@@ -135,9 +135,9 @@
 			);
 			dependencies = (
 			);
-			name = "Brownie de Beringela";
+			name = "eggplant-brownie";
 			productName = "eggplant-brownie";
-			productReference = B386A9BF241D6B06007E432D /* Brownie de Beringela.app */;
+			productReference = B386A9BF241D6B06007E432D /* Alimentos.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +168,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B386A9BE241D6B06007E432D /* Brownie de Beringela */,
+				B386A9BE241D6B06007E432D /* eggplant-brownie */,
 			);
 		};
 /* End PBXProject section */
@@ -355,7 +355,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.entendentodireito.eggplant-brownie";
-				PRODUCT_NAME = "Brownie de Beringela";
+				PRODUCT_NAME = Alimentos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,7 +374,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "br.com.entendentodireito.eggplant-brownie";
-				PRODUCT_NAME = "Brownie de Beringela";
+				PRODUCT_NAME = Alimentos;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -392,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "Brownie de Beringela" */ = {
+		B386A9D3241D6B07007E432D /* Build configuration list for PBXNativeTarget "eggplant-brownie" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B386A9D4241D6B07007E432D /* Debug */,
