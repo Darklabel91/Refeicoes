@@ -8,12 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B313656524258CDA0058473E /* RemoveRefeicaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B313656424258CDA0058473E /* RemoveRefeicaoViewController.swift */; };
-		B368CF7E24269FCF0082FAB7 /* Alerta tela 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B368CF7824269FCF0082FAB7 /* Alerta tela 2.png */; };
-		B368CF7F24269FCF0082FAB7 /* Alerta tela 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B368CF7924269FCF0082FAB7 /* Alerta tela 3.png */; };
-		B368CF8024269FCF0082FAB7 /* Tela 2.png in Resources */ = {isa = PBXBuildFile; fileRef = B368CF7A24269FCF0082FAB7 /* Tela 2.png */; };
-		B368CF8124269FCF0082FAB7 /* Tela1.png in Resources */ = {isa = PBXBuildFile; fileRef = B368CF7B24269FCF0082FAB7 /* Tela1.png */; };
-		B368CF8224269FCF0082FAB7 /* Tela 3.png in Resources */ = {isa = PBXBuildFile; fileRef = B368CF7C24269FCF0082FAB7 /* Tela 3.png */; };
-		B368CF8324269FCF0082FAB7 /* Detalhes tela 1.png in Resources */ = {isa = PBXBuildFile; fileRef = B368CF7D24269FCF0082FAB7 /* Detalhes tela 1.png */; };
 		B386A9C3241D6B06007E432D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9C2241D6B06007E432D /* AppDelegate.swift */; };
 		B386A9C5241D6B06007E432D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9C4241D6B06007E432D /* SceneDelegate.swift */; };
 		B386A9C7241D6B06007E432D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B386A9C6241D6B06007E432D /* ViewController.swift */; };
@@ -30,12 +24,6 @@
 
 /* Begin PBXFileReference section */
 		B313656424258CDA0058473E /* RemoveRefeicaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveRefeicaoViewController.swift; sourceTree = "<group>"; };
-		B368CF7824269FCF0082FAB7 /* Alerta tela 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Alerta tela 2.png"; path = "../../../../9- Prints de tela/Alerta tela 2.png"; sourceTree = "<group>"; };
-		B368CF7924269FCF0082FAB7 /* Alerta tela 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Alerta tela 3.png"; path = "../../../../9- Prints de tela/Alerta tela 3.png"; sourceTree = "<group>"; };
-		B368CF7A24269FCF0082FAB7 /* Tela 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tela 2.png"; path = "../../../../9- Prints de tela/Tela 2.png"; sourceTree = "<group>"; };
-		B368CF7B24269FCF0082FAB7 /* Tela1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Tela1.png; path = "../../../../9- Prints de tela/Tela1.png"; sourceTree = "<group>"; };
-		B368CF7C24269FCF0082FAB7 /* Tela 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tela 3.png"; path = "../../../../9- Prints de tela/Tela 3.png"; sourceTree = "<group>"; };
-		B368CF7D24269FCF0082FAB7 /* Detalhes tela 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Detalhes tela 1.png"; path = "../../../../9- Prints de tela/Detalhes tela 1.png"; sourceTree = "<group>"; };
 		B386A9BF241D6B06007E432D /* eggplant-brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "eggplant-brownie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B386A9C2241D6B06007E432D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B386A9C4241D6B06007E432D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,23 +52,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		B368CF7724269F790082FAB7 /* Imagens */ = {
-			isa = PBXGroup;
-			children = (
-				B368CF7B24269FCF0082FAB7 /* Tela1.png */,
-				B368CF7A24269FCF0082FAB7 /* Tela 2.png */,
-				B368CF7C24269FCF0082FAB7 /* Tela 3.png */,
-				B368CF7924269FCF0082FAB7 /* Alerta tela 3.png */,
-				B368CF7824269FCF0082FAB7 /* Alerta tela 2.png */,
-				B368CF7D24269FCF0082FAB7 /* Detalhes tela 1.png */,
-			);
-			path = Imagens;
-			sourceTree = "<group>";
-		};
 		B386A9B6241D6B06007E432D = {
 			isa = PBXGroup;
 			children = (
-				B368CF7724269F790082FAB7 /* Imagens */,
 				B386A9C1241D6B06007E432D /* eggplant-brownie */,
 				B386A9C0241D6B06007E432D /* Products */,
 			);
@@ -201,13 +175,7 @@
 				B386A9CF241D6B07007E432D /* LaunchScreen.storyboard in Resources */,
 				B386A9CC241D6B07007E432D /* Assets.xcassets in Resources */,
 				B3C546C72422B537008EBEA4 /* AdicionarItensViewController.xib in Resources */,
-				B368CF8324269FCF0082FAB7 /* Detalhes tela 1.png in Resources */,
 				B386A9CA241D6B06007E432D /* Main.storyboard in Resources */,
-				B368CF8024269FCF0082FAB7 /* Tela 2.png in Resources */,
-				B368CF8124269FCF0082FAB7 /* Tela1.png in Resources */,
-				B368CF7F24269FCF0082FAB7 /* Alerta tela 3.png in Resources */,
-				B368CF8224269FCF0082FAB7 /* Tela 3.png in Resources */,
-				B368CF7E24269FCF0082FAB7 /* Alerta tela 2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
