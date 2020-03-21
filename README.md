@@ -1,4 +1,4 @@
-# Brownie de Beringela ;-) 
+# Brownie de Beringela
 
 Primeiro feito em IOS aqui no Git.
 
